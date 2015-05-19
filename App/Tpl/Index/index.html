@@ -1,0 +1,72 @@
+<include file="Public:header" />
+<include file="Public:nav_login" />
+<include file="Public:message" /> 
+<include file="Public:index_left" />
+<include file="Public:index_right" />
+<div class="page_wrap">
+<nav class="{$display}">
+<ul class="pagination">
+						<li>
+							<a href="<?php echo url(Index,index).'?p='.($p-1) ; ?>" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						
+<?php for($start;$start<=$end;$start++){ ?>
+
+						<li><a href=" <?php echo url(Index,index).'?p='.$start ; ?>"><?php echo $start ;?></a></li>
+				
+						<li>
+							<?php  } ;?>
+						  <a href="<?php url(Index,index).'?p='.($p+1) ; ?>" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ 
+	
+     <script>
+    $(document).ready(function(){
+		
+		$('#1').removeClass('top-hr');
+			
+		  //登陆按钮
+        $('#login-btn').click(function(){
+            var is = $('#login-div').hasClass('off-display');
+            if (is){
+                $('#login-div').removeClass('off-display');
+            }else{
+                $('#login-div').addClass('off-display');
+            }
+    });
+		
+        //退出按钮
+        $('.my-layout').mouseover(function(){
+            //var is = $('#login-div').hasClass('off-display');
+            $('#login-div').removeClass('off-display');
+			$('.my-layout').mouseleave(function(){
+				$('#login-div').addClass('off-display');
+			});
+           
+               
+            
+		 
+    });
+        
+    
+    });
+        
+       
+    </script>
+        
+     
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+body {
+    font-family: "Microsoft YaHei";
+}
+
+.container-fix {
+    #width: 600px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dedddf;
+}
+.ui-alertbar {
+    margin-top: 51px;
+    width: 100%;
+    height: 42px;
+}
+
+.entry-meta {
+    margin-top: 8px;
+    color: rgb(157, 158, 159);
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25.5px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: -5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 8px;
+    text-align: left;
+    width: 600px;
+    word-wrap: break-word;
+}
+
+.entry-summary {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.ng-isolate-scope {
+    color: rgb(65, 66, 67);
+    cursor: auto;
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 81px;
+    line-height: 27.2000007629395px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.top-hr {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #edeeef;
+}
+
+.background {
+    background: #FFFFFF;
+}
+
+.avatar-big {
+    width: 100px;
+    height: 100px;
+}
+
+.avatar-link {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #414243;
+    display: block;
+}
+
+.ng-binding {
+    color: rgb(157, 158, 159);
+    cursor: auto;
+    display: inline;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: auto;
+    line-height: 25.5px;
+    text-decoration: none;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.description {
+    color: rgb(65, 66, 67);
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 50px;
+    line-height: 25.5px;
+    white-space: pre-wrap;
+    width: 170px;
+    word-wrap: break-word;
+}
+
+.login {
+    width: 330px;
+    height: 210px;
+    position: absolute;
+    right:2%;
+    margin: 0 0 0 -8px;
+    top: 53px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px #333333;
+    z-index: 22;
+}
+
+.login-btn {
+    position: relative;
+}
+
+.nav-right {
+    position: relative;
+    float: right;
+    width: 54px;
+    height: 54px;
+    margin-right: -15px;
+}
+
+.login-inline {
+    margin: 20px;
+}
+
+.login-p {
+    font-size: 16px;
+    color: #999999;
+    
+}
+
+.mybtn {
+    width: 100%;
+}
+
+.off-display {
+    display: none;
+}
+
+.ue-editor {
+    margin-top: 20px;
+}
+
+#textarea1 {
+    width: 100%;
+    min-height: 400px;
+}
+
+.title-input {
+    border-radius: 0;
+}
+
+.entry-content {
+	margin: 20px 0;
+	color: #414243;
+	font-size: 16px;
+	line-height: 1.7;
+	font-weight: 400;
+}
+
+.entry-title {
+	margin: 0;
+	color: #414243;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+.comment-ico {
+	margin-right:8px;
+	width: 16px;
+	height: 16px;
+	font-size: 15px;
+	color: #9d9e9f;
+}
+
+.comment-item {
+	margin-top: 15px;
+	padding-top: 15px;
+	
+}
+
+.avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	border: 0;
+	float: left;
+}
+
+.comment-body {
+	margin: 0 0 0 60px;
+}
+
+.comment-hd {
+	font-size: 16px;
+	line-height: 1.7;
+	font-weight: 400;
+}
+
+.comment-content {
+	font-size: 15px;
+	line-height: 1.7;
+	font-weight: 400;
+	word-wrap: break-word;
+	
+}
+
+.comment-ft {
+	color: #9d9e9f;
+}
+
+.border-top {
+	border-top: 1px solid #f1f2f3;
+}
+
+.comment-form {
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.fix-ft {
+	width: 40px;
+	height: 40px
+}
+
+.editable {
+	margin-left: 20px;
+	padding: 6px 12px;
+	width: 600px;
+	font-size: 16px;
+	min-height: 18px;
+	line-height: 26px;
+	white-space: pre-wrap;
+	color: #222;
+	cursor: text;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.05) inset;
+}
+
+.btn-fix {
+	margin-left: 20px;
+	margin-top: -3px;
+	height: 40px;
+	width: 80px
+}
+
+.ft {
+	margin-bottom:80px;
+}
+
+.layout{
+	width: 120px;
+    position: absolute;
+    right:2%;
+    margin: 0 0 0 -8px;
+    top: 50px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px #333333;
+    z-index: 22;
+	text-align: center;
+}
+
+.layout-inline {
+	margin: 10px;
+	color: #9d9e9f;
+	font-size: 16px;
+	
+}
+
+.bottom-login {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	background:#F2F2F2;
+	display: table;
+}
+
+.cb-title {
+	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 30px;
+}
+
+.bottom-input {
+	margin-left: 15px;
+	padding-bottom: 50px;
+}
+
+.my-bottom-input{
+	margin-left: -5px;
+}
+
+.bottom-btn{
+	margin-left: 20px;
+	height: 34px;
+	width: 80px
+}
+
+.bottom{
+	margin-bottom: 20px;
+}
+
+.page_wrap {
+	text-align: center;
+	margin-bottom: 50px;
+}

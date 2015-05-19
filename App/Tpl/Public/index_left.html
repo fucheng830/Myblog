@@ -1,0 +1,39 @@
+ <div class="row bottom">
+            <div class="col-lg-9">
+               
+				<!--模版赋值-->
+     			<volist name="blog" id="vo">
+					
+                   <div class="col-lg-12 top-hr" id="{$i}">
+                    
+                <h1 class="entry-title">
+                    <a href="__ROOT__/index.php/Index/blog?b_id={$vo.blog_id}" class="">{$vo.b_title}</a>
+                </h1>
+                    
+                <div class="entry-meta">
+                    <a target="_blank" href="#" class="author name ng-binding">{$vo.sort_name}</a>
+                        <span class="bull" ng-click="test()">·</span>
+                    <time title="2015年4月22日星期三晚上9点28分" ui-time="" datetime="2015-04-22T21:28:02+08:00" class="published ng-binding ">{$vo.last_updata}</time>
+                    <a href="/cbling/20010164#comments" class="comment ng-binding" ng-show="post.commentsCount"><i class="icon icon-comment"></i>{$vo.comment_num}<span class="hide-on-mobile"> 条评论</span></a>
+               </div>
+                    
+                <section class="entry-summary ng-scope" ng-if="!titleImageShow">
+                   
+              
+					{$vo.b_descript}
+                    <a href="__ROOT__/index.php/Index/blog?b_id={$vo.blog_id}"><span class="read-all">继续阅读<i class="icon icon-read-all"></i></span></a>
+                   
+                    
+               </section>
+                </div>
+					
+				</volist>
+				
+				<div class="col-lg-12 top-hr ">
+					
+				</div>
+				
+        
+            </div>
+	 
+	 		

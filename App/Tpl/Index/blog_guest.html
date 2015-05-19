@@ -1,0 +1,116 @@
+<include file="Public:header" />
+<include file="Public:nav" />
+<include file="Public:message" /> 
+<div class="row">
+            <div class="col-lg-9">
+                <div class="col-lg-12">
+                <h1 class="entry-title">
+                    {$blog[0][b_title]}
+                </h1>
+                    
+                <div class="entry-meta">
+                    <a target="_blank" href="http://www.zhihu.com/people/chenbailing" class="author name ng-binding">陈柏龄</a>
+                        <span class="bull" ng-click="test()">·</span>
+                    <time title="2015年4月22日星期三晚上9点28分" ui-time="" datetime="2015-04-22T21:28:02+08:00" class="published ng-binding "></time>
+                    <a href="/cbling/20010164#comments" class="comment ng-binding" ng-show="post.commentsCount"><i class="icon icon-comment"></i>{$num}<span class="hide-on-mobile"> 条评论</span></a>
+               </div>
+                    
+                <section class="entry-content" ng-bind-html="postContentTrustedHtml"> {$blog[0][b_content]}</section>
+                </div>
+                
+                   <div class="col-lg-12 top-hr">
+					 <p>
+						 <span class="counter">
+						  <span class="glyphicon glyphicon-comment comment-ico"></span><span class="ng-binding">{$num} 条评论</span>
+						</span>
+					  </p>
+					   <volist name="comment" id="vo">
+					<div class="comment-item border-top">
+						<img class="avatar" src="{$vo.author_img}">
+						<div class="comment-body">
+							<div class="comment-hd">
+								<a>{$vo.author}</a>
+							</div>
+							<div class="comment-content">
+								{$vo.comment}
+							</div>
+							<div class="comment-ft">
+								<time title="2015年5月16日星期六上午9点24分" ui-time="" datetime="2015-05-16T09:24:22+08:00" class="date ng-binding ng-isolate-scope">{$vo.c_time}</time>
+							</div>
+						</div>
+					</div>
+					    </volist>
+					
+					<form class="comment-form off-display" action="__ROOT__/index.php/Blog/comment" method="post">
+					   <img src="{$user[user_img]}" class="avatar">
+					   <input type="text" class="editable"  placeholder="写下你的评论…" name="comment">
+					   <input type="hidden" name="b_id" value="{$blog_id}">
+					   <input type="submit" class="btn btn-default btn-fix"> 
+					</form>
+					   
+					 <div class="bottom-login">
+					  
+						 <div class="cb-title">登录评论</div>
+						 
+					<form action="__ROOT__/index.php/User/login" method="post" class="">
+                  		<div class="col-lg-5 bottom-input">
+                    	<input type="text" name="user_name" class="form-control" id="exampleInputEmail1" placeholder="用户名">
+						</div>
+                  		
+                 		<div class="col-lg-5 bottom-input my-bottom-input">
+                    	<input type="password" name="user_psw" class="form-control" id="exampleInputPassword1" placeholder="密码">
+							</div>
+                  
+						<button type="submit" class="btn btn-default bottom-btn ">登陆</button>
+				  </form>
+					</div>
+				
+                </div>
+            </div>
+<include file="Public:index_right" />
+  <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ 
+	
+     <script>
+    $(document).ready(function(){
+		
+		$('#1').removeClass('top-hr');
+			
+		  //登陆按钮
+        $('#login-btn').click(function(){
+            var is = $('#login-div').hasClass('off-display');
+            if (is){
+                $('#login-div').removeClass('off-display');
+            }else{
+                $('#login-div').addClass('off-display');
+            }
+    });
+		
+        //退出按钮
+        $('.my-layout').mouseover(function(){
+            //var is = $('#login-div').hasClass('off-display');
+            $('#login-div').removeClass('off-display');
+			$('.my-layout').mouseleave(function(){
+				$('#login-div').addClass('off-display');
+			});
+           
+               
+            
+		 
+    });
+        
+    
+    });
+        
+       
+    </script>
+        
+     
+
+</body>
+</html>
+	 
+  

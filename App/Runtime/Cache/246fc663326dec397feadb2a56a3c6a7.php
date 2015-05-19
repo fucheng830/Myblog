@@ -1,0 +1,147 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>myblog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="__ROOT__/Public/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- 引入富文本编辑器CSS -->
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/dist/css/wangEditor-1.3.0.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="__ROOT__/Public//bootstrap-3.3.4-dist/myblog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top border-bottom background">
+      <div class="container container-fix">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Myblog</a>
+        </div>
+		 <div id="navbar" class="collapse navbar-collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a  class="active" href="<?php echo ($write_url); ?>">写文章</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav pull-right login-btn">
+				<li class="my-layout">
+					<a href="#" id="user_name"><?php echo ($user_nice_name); ?></a>
+				</li>
+				<div class="layout my-layout off-display" id="login-div">
+				<div class="layout-inline">
+					<a href="<?php echo ($layout); ?>"><p class=""><span class="glyphicon glyphicon-log-out"></span> 退出帐号</p></a>
+				</div>
+				</div>
+			  </ul>
+			</div><!--/.nav-collapse -->
+          
+      </div>
+   
+
+    </nav>
+    
+    
+
+    <div class="container">
+        <!--提示框-->
+        <div class="ui-alertbar info ng-hide" ng-show="alert.message" data-alert="globalAlert" data-align="bottom" data-target="#header-holder" ui-     alertbar="" ui-sticky="">
+        <div class="receptacle ng-binding">
+            <i class="icon icon-alertbar-info"></i>
+        </div>
+            
+        </div>
+        
+        <div class="row">
+           
+                <div class="col-lg-12">
+                    <form action="__ROOT__/index.php/Blog/write_blog" method="post">
+                    <div class="col-lg-10">
+                     <input type="text" name="b_title" class="form-control title-input" placeholder="标题">
+                    </div>
+                    <div class="col-lg-12 ue-editor">
+                     <textarea id="textarea1" name="b_content"></textarea>
+                    </div>
+					<div class="col-lg-5 ue-editor" >
+						分类：
+						<select class="btn btn-default btn-sm" name="b_sort">
+							<?php if(is_array($sort)): $i = 0; $__LIST__ = $sort;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($vo["sort_id"]); ?>，<?php echo ($vo["sort_name"]); ?>"><?php echo ($vo["sort_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+					     </select>
+					</div>
+                     <div class="col-lg-4 ue-editor ft">
+                     <button class="btn btn-primary col-lg-4" type="submit">确定</button>
+                    </div>
+                    
+                    </form>
+                </div>
+            
+            
+            
+        </div>
+  
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- 引入富文本编辑器-->
+    <script type="text/javascript" src='__ROOT__/Public/dist/js/wangEditor-1.3.0.min.js'></script>
+    <script type="text/javascript">
+	$(function(){
+		$('#textarea1').wangEditor();
+	});
+    </script>
+      <script>
+    $(document).ready(function(){
+        //登陆按钮
+        $('.my-layout').mouseover(function(){
+            //var is = $('#login-div').hasClass('off-display');
+            $('#login-div').removeClass('off-display');
+			$('.my-layout').mouseleave(function(){
+				$('#login-div').addClass('off-display');
+			});
+           
+               
+            
+		 
+    });
+        
+    
+    });
+        
+       
+    </script>
+  
+  
+
+</body>
+</html>

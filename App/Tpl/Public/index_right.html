@@ -1,0 +1,18 @@
+<!--右边作者模块-->
+<div class="col-lg-3">
+                <div class="block column-about">
+                <div class="avatar-link">
+                    <img class="avatar-big" ng-src="" src="__ROOT__/Public/img/user_image.jpg">
+                 </div>
+                <div href="cbling" class="title">@南七度</div>
+                  <!-- ngIf: column.creator.slug == me.slug -->
+                <div class="followers" ng-switch="" on="!!column.followersCount">
+                    <!-- ngSwitchWhen: true --><a ng-switch-when="true" href="/cbling/followers" class="ng-binding">8863 人关注</a>
+                    <!-- ngSwitchWhen: false -->
+                </div>
+      <div class="description" ng-bind-html="column.description | linky">非专业程序员</div>
+    </div>
+            </div>
+
+	</div>   <!--row结束标签-->
+</div><!--container结束标签-->
